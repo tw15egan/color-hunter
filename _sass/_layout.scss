@@ -1,0 +1,122 @@
+/**
+ * Site header
+ */
+.site-header {
+  min-height: 65px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: $margin;
+  
+}
+
+.site-title {
+  font-size: 26px;
+  color:  $primary-color;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  border-bottom: 7px solid $accent-color;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 $padding;
+}
+
+.post__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post {
+  width: calc(50% - (#{$margin} / 2));
+  margin-bottom: $margin;
+  display: flex;
+  position: relative;
+
+  
+  &__image {
+    width: 75%;
+  }
+  
+  &__color {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    overflow: hidden;
+    
+    &--box {
+      position: relative;
+      height: 25%;
+      width: 100%;
+      min-height: 10px;
+      min-width: 10px;
+      
+      &:hover {
+        & .post__color--text {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+    
+    &--text {
+      position: absolute;
+      text-align: center;
+      margin: 0;
+      bottom: 0;
+      opacity: 0;
+      font-size: 16px;
+      padding: $padding-small;
+      transform: translateY(20px);
+      color: $white;
+      display: inline-block;
+      width: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+/**
+ * Site footer
+ */
+.site-footer {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  border-top: 7px solid $accent-color;
+  display: flex;
+  justify-content: space-between;
+  margin: $margin 0;
+  
+  .site-title {
+    border-bottom: 0;
+  }
+  
+  li > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+      height: 27px;
+      margin-right: $padding-small;
+    }
+  }
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

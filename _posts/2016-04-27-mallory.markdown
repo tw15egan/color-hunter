@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Mallory"
+categories: red
+hex: ["#DCBBBB", "#F58A84", "#F53F29", "#D30000"]
+image: 
+  feature: Mallory.jpg
+---

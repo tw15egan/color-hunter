@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Light"
+categories: red
+orientation: portrait
+hex: ["#00BFD5", "#ED7600", "#D3C6DA", "#D85855"]
+image: 
+  feature: light-crop.png
+---
