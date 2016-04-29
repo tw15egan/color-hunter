@@ -58,6 +58,7 @@
       width: 100%;
       min-height: 10px;
       min-width: 10px;
+      transform: translateZ(0);
       
       &:hover {
         & .post__color--text {
@@ -66,7 +67,7 @@
         }
       }
     }
-    
+
     &--text {
       position: absolute;
       text-align: center;
