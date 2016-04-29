@@ -2,7 +2,10 @@
 layout: post
 title:  "Mallory"
 categories: red
-hex: ["#DCBBBB", "#F58A84", "#F53F29", "#D30000"]
+orientation: "landscape"
+hex: ["#01C7D2", "#FF6900", "#12151C", "#D8B595"]
 image: 
-  feature: Mallory.jpg
+  feature: mallory-crop.png
 ---
+
+Hello

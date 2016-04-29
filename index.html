@@ -5,11 +5,27 @@ layout: default
   <ul class="post__container">
     {% for post in site.posts %}
     {% if post.image.feature %}
+    
+      {% if post.orientation == 'portrait' %}
       <li class="post">
-        <div class="post__image">
+      {% elsif post.orientation == 'landscape' %}
+      <li class="post landscape">
+      {% endif %}
+      
+        {% if post.orientation == 'portrait' %}
+        <div class="post__image--portrait">
+        {% elsif post.orientation == 'landscape' %}
+        <div class="post__image--landscape">
+        {% endif %}
           <img src="img/{{ post.image.feature }}" />
         </div>
-        <div class="post__color">
+        
+        {% if post.orientation == 'portrait' %}
+        <div class="post__color--portrait">
+        {% elsif post.orientation == 'landscape' %}
+        <div class="post__color--landscape">
+        {% endif %}
+        
           {% for hex in post.hex %}
           <div data-hex="{{hex}}" class="post__color--box" style="background-color: {{hex}};">
             <p class="post__color--text">

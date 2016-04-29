@@ -2,6 +2,7 @@
 layout: post
 title:  "Red Dress"
 categories: red
+orientation: "portrait"
 hex: ["#DCBBBB", "#F58A84", "#F53F29", "#D30000"]
 image: 
   feature: dress-red-crop.png
