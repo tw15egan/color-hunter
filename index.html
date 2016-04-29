@@ -17,8 +17,11 @@ layout: default
         {% elsif post.orientation == 'landscape' %}
         <div class="post__image--landscape">
         {% endif %}
+        <a href="{{post.url}}">
           <img src="img/{{ post.image.feature }}" />
+        </a>
         </div>
+        
         
         {% if post.orientation == 'portrait' %}
         <div class="post__color--portrait">
@@ -34,6 +37,7 @@ layout: default
           </div>
           {% endfor %}
         </div>
+        
       </li>
     {% endif %}
     {% endfor %}

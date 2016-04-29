@@ -5,7 +5,7 @@ categories: red
 orientation: "landscape"
 hex: ["#01C7D2", "#FF6900", "#12151C", "#D8B595"]
 image: 
-  feature: mallory-crop.png
+  feature: mallory-crop-edit.jpeg
 ---
 
 Hello

@@ -5,5 +5,8 @@ categories: red
 orientation: "portrait"
 hex: ["#DCBBBB", "#F58A84", "#F53F29", "#D30000"]
 image: 
-  feature: dress-red-crop.png
+  feature: dress-red-crop-edit.jpeg
+  hires: dress-red-crop.png
 ---
+
+ ![Red Dress](./img/  dress-red-crop.png)

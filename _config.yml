@@ -17,6 +17,7 @@ url: "http://tw15egan.github.io/" # the base hostname & protocol for your site
 twitter_username: tj_egan 
 github_username:  tw15egan
 
+permalink: /:title
 
 hex: 
 # Build settings
