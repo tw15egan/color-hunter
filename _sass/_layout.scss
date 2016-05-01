@@ -6,10 +6,11 @@
   display: flex;
   align-items: flex-end;
   margin-bottom: $margin;
+  
 }
 
 .site-title {
-  font-size: 1.5rem;
+  font-size: 26px;
   color:  $primary-color;
   font-weight: 600;
   letter-spacing: -1px;
@@ -34,9 +35,12 @@
   flex-direction: column;
   
   @media (max-width: 600px) {
-    margin-bottom: calc(25% + #{$margin}) !important;
+    flex-direction: row;
   }
+}
 
+.color__landscape {
+  flex-direction: row !important;
 }
 
 .post {
@@ -44,51 +48,60 @@
   margin-bottom: $margin;
   display: flex;
   position: relative;
-
+  
+  
   &__image--portrait {
     width: 75%;
   }
-
+  
   &__image--landscape {
     width: 100%;
-    height: 75%;
-    // height: 66.5%;
     
     @media (max-width: 600px) {
-      height: 66.5%;
+      width: 75%;
+      
+      img {
+        object-fit: cover;
+      }
     }
   }
-
-  &__color,
-  %post__color {
+  
+  &__color {
     position: absolute;
     display: flex;
     overflow: hidden;
-
+    
     &--landscape {
-      @extend %post__color;
-      // height: 33.5%;
+      @extend .post__color;
       height: 25%;
       width: 100%;
-
+      
       & .post__color--box {
         height: 100%;
+        width: 25%;
       }
       
       @media (max-width: 600px) {
-        height: 33.5%;
+        flex-direction: column;
+        width: 25%;
+        height: 100%;
+        
+        & .post__color--box {
+          height: 25%;
+          width: 100%;
+        }
       }
     }
-
+    
     &--portrait {
-      @extend %post__color;
+      @extend .post__color;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
       height: 100%;
       width: 25%;
     }
-
+    
     &--box {
       position: relative;
       height: 25%;
@@ -96,7 +109,7 @@
       min-height: 10px;
       min-width: 10px;
       transform: translateZ(0);
-
+      
       &:hover {
         & .post__color--text {
           opacity: 1;
@@ -111,13 +124,13 @@
       margin: 0;
       bottom: 0;
       opacity: 0;
-      font-size: .825rem;
+      font-size: 16px;
       padding: $padding-small;
       transform: translateY(20px);
       color: $white;
       display: inline-block;
       width: 100%;
-      background-color: rgba(0, 0, 0, .5);
+      background-color: rgba(0,0,0,0.5);
     }
   }
   
@@ -134,18 +147,18 @@
   display: flex;
   align-items: center;
   border-top: 7px solid $accent-color;
+  display: flex;
   justify-content: space-between;
   margin: $margin 0;
-
+  
   .site-title {
     border-bottom: 0;
   }
-
+  
   li > a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     svg {
       height: 27px;
       margin-right: $padding-small;
@@ -157,8 +170,4 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-
-.color__landscape {
-  flex-direction: row;
 }

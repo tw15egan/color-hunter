@@ -1,8 +1,32 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="page" itemscope itemtype="http://schema.org/Blogpageing">
+  
+  {% if page.orientation == 'portrait' %}
+  <div class="page__image--portrait">
+  {% elsif page.orientation == 'landscape' %}
+  <div class="page__image--landscape">
+  {% endif %}
+  <a href="{{site.baseurl}}{{page.url}}">
+    <img src="img/{{ page.image.feature }}" />
+  </a>
+  </div>
 
-    {{ content }}
+
+  {% if page.orientation == 'portrait' %}
+  <div class="page__color--portrait">
+  {% elsif page.orientation == 'landscape' %}
+  <div class="page__color--landscape">
+  {% endif %}
+
+    {% for hex in page.hex %}
+    <div data-hex="{{hex}}" class="page__color--box" style="background-color: {{hex}};">
+      <p class="page__color--text">
+        {{hex}}
+      </p>
+    </div>
+    {% endfor %}
+  </div>  
 
 </article>
