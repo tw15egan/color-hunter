@@ -17,7 +17,7 @@ layout: default
         {% elsif post.orientation == 'landscape' %}
         <div class="post__image--landscape">
         {% endif %}
-        <a href="{{post.url}}">
+        <a href="{{site.baseurl}}{{post.url}}">
           <img src="img/{{ post.image.feature }}" />
         </a>
         </div>
