@@ -1,27 +1,26 @@
 ---
 layout: default
 ---
-<article class="page" itemscope itemtype="http://schema.org/Blogpageing">
+<article class="full__view" itemscope itemtype="http://schema.org/Blogpageing">
   
-  {% if page.orientation == 'portrait' %}
-  <div class="page__image--portrait">
-  {% elsif page.orientation == 'landscape' %}
-  <div class="page__image--landscape">
-  {% endif %}
-  <a href="{{site.baseurl}}{{page.url}}">
-    <img src="img/{{ page.image.feature }}" />
-  </a>
+
+  <div {% if page.orientation == "portrait" %} class="page__image--portrait"
+       {% elsif page.orientation == "landscape" %} class="page__image--landscape"{% endif %} >
+
+    <a href="{{site.baseurl}}{{page.url}}">
+      <img src="img/{{ page.image.feature }}" />
+    </a>
   </div>
+  
 
+  
+  <div {% if page.orientation == 'portrait' %} class="page__color--portrait"
+       {% elsif page.orientation == 'landscape' %} class="page__color--landscape page" {% endif %}>
+  
 
-  {% if page.orientation == 'portrait' %}
-  <div class="page__color--portrait">
-  {% elsif page.orientation == 'landscape' %}
-  <div class="page__color--landscape">
-  {% endif %}
 
     {% for hex in page.hex %}
-    <div data-hex="{{hex}}" class="page__color--box" style="background-color: {{hex}};">
+    <div data-hex="{{hex}}" class="page__color--box page__box" style="background-color: {{hex}};">
       <p class="page__color--text">
         {{hex}}
       </p>

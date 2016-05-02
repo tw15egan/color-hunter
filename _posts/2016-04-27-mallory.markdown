@@ -7,5 +7,3 @@ hex: ["#01C7D2", "#FF6900", "#12151C", "#D8B595"]
 image: 
   feature: mallory-crop-edit.jpeg
 ---
-
-Hello
